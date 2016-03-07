@@ -1,0 +1,17 @@
+
+<h2>Information page</h2>
+
+<% if current_user %>
+    <h3>You're now logged in to the program of Jurgen Bosmans as a Google User...</h3>
+    <%= image_tag(current_user.image, size: "50x50")  %>
+    <div>Current user : <%= current_user.name %></div>
+    <div>First name : <%= current_user.first_name %></div>
+    <div>Last name : <%= current_user.last_name %></div>
+    <div>Email : <%= current_user.email %></div>
+    <div>Provider :  <%= current_user.provider %></div>
+    <div>Uid :  <%= current_user.uid %></div>
+    <div>Image :  <%= current_user.image %></div>
+    <div>Expires : <%= current_user.oauth_expires_at %></div>
+<% else %>
+    No user
+<% end %>    
